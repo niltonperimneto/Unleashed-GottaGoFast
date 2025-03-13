@@ -1973,7 +1973,7 @@ void Video::WaitForGPU()
 {
     g_waitForGPUCount++;
 
-    // Wait for all queue frames to finish.
+    // Wait for all queued frames to finish.
     for (size_t i = 0; i < NUM_FRAMES; i++)
     {
         if (g_commandListStates[i])
