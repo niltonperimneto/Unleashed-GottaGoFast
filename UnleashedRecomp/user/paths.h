@@ -1,23 +1,22 @@
 #pragma once
 
 #include <mod/mod_loader.h>
+#include "config.h"
 
 #define USER_DIRECTORY "UnleashedRecomp"
-
-#ifndef GAME_INSTALL_DIRECTORY
-#define GAME_INSTALL_DIRECTORY "."
-#endif
 
 extern std::filesystem::path g_executableRoot;
 
 inline std::filesystem::path GetGamePath()
 {
-    return GAME_INSTALL_DIRECTORY;
+    const char* homeDir = getenv("HOME");
+    return (homeDir ? std::filesystem::path(homeDir) / ".local" / "share" / USER_DIRECTORY : g_executableRoot);
 }
 
 bool CheckPortable();
 std::filesystem::path BuildUserPath();
 const std::filesystem::path& GetUserPath();
+extern const std::filesystem::path g_gameInstallPath;
 
 inline std::filesystem::path GetSavePath(bool checkForMods)
 {
