@@ -5,7 +5,7 @@
 Binaries from this repository are built using:
 
 ```
-$ ccmake . --preset linux-release -DSDL2MIXER_VORBIS=VORBISFILE
+$ cmake . --preset linux-release -DSDL2MIXER_VORBIS=VORBISFILE -DNFD_PORTAL=ON
 $ cmake --build ./out/build/linux-release --target UnleashedRecomp
 ```
 
