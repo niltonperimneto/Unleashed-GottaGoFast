@@ -16,7 +16,6 @@
 #include <user/registry.h>
 #include <kernel/xdbf.h>
 #include <install/installer.h>
-#include <install/update_checker.h>
 #include <os/logger.h>
 #include <os/process.h>
 #include <os/registry.h>
@@ -232,8 +231,6 @@ int main(int argc, char *argv[])
     double timeDifferenceSeconds = difftime(timeNow, Config::LastChecked);
     if (timeDifferenceSeconds > TimeBetweenUpdateChecksInSeconds)
     {
-        UpdateChecker::initialize();
-        UpdateChecker::start();
         Config::LastChecked = timeNow;
         Config::Save();
     }

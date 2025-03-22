@@ -22,6 +22,7 @@
 [submodule "thirdparty/SDL"]
 	path = thirdparty/SDL
 	url = https://github.com/libsdl-org/SDL.git
+	branch = release-2.32.x
 [submodule "thirdparty/Vulkan-Headers"]
 	path = thirdparty/Vulkan-Headers
 	url = https://github.com/KhronosGroup/Vulkan-Headers.git
@@ -52,6 +53,7 @@
 [submodule "thirdparty/SDL_mixer"]
 	path = thirdparty/SDL_mixer
 	url = https://github.com/libsdl-org/SDL_mixer
+	branch = release-2.8.x
 [submodule "thirdparty/implot"]
 	path = thirdparty/implot
 	url = https://github.com/epezent/implot.git
