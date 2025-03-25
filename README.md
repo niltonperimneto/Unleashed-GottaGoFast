@@ -1,9 +1,16 @@
 > [!WARNING]
 > This repository is a fork of the Unleashed Recompiled project specifically designed to support binary Arch Linux packaging through the AUR and the PKGBUILD system.
-> Please be also aware this package, unlike the Flatpak version provided upstream, may not be compatible with the Hedgemod Manager, differently from the Flatpak version provided upstream.
+> Please be also aware this package, unlike the Flatpak version provided upstream, it may not be compatible with the Hedgemod Manager, differently from the Flatpak version provided upstream.
+> I'm also applying patches not yet merged upstream that should improve the experience on Linux. So in some aspects the merge can be a little bit faster than upstream
+> If there's some changes that are suitable for upstream you can commit yourself crediting the author, if not yet commited by me.
+
+
+> In the releases you can also find the binaries 
+> You can also feel free to compile yourself
+> I'm open for merge requests and I will review it in the due time
+
 
 Binaries from this repository are built using:
-
 ```
 $ cmake . --preset linux-release -DSDL2MIXER_VORBIS=VORBISFILE -DNFD_PORTAL=ON
 $ cmake --build ./out/build/linux-release --target UnleashedRecomp
